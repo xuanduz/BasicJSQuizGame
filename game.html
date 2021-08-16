@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="icon" href="./logo_title.png" type="image/icon type">
+    <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- confetti effect -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div id="game" class="game">
+            <div id="hud">
+                <div class="hud-item">
+                    <p id="progressText" class="hud-prefix">
+                        Question
+                    </p>
+                    <div id="progressBar">
+                        <div id="progressBarFull"></div>
+                    </div>
+                </div>
+                <div class="hud-item">
+                    <p class="hud-prefix">
+                        Score
+                    </p>
+                    <h1 class="hud-main-text" id="score">
+                        0
+                    </h1>
+                </div>
+            </div>
+            <h1 id="question">Choice the answer to this question</h1>
+            <div id="answers-container">
+                <button class="choice-container">
+                    <p class="choice-prefix">A</p>
+                    <p class="choice-text">Choice 1</p>
+                </button>
+                <button class="choice-container">
+                    <p class="choice-prefix">B</p>
+                    <p class="choice-text">Choice 2</p>
+                </button>
+                <button class="choice-container" >
+                    <p class="choice-prefix">C</p>
+                    <p class="choice-text">Choice 3</p>
+                </button>
+                <button class="choice-container">
+                    <p class="choice-prefix">D</p>
+                    <p class="choice-text">Choice 4</p>
+                </button>
+            </div>
+            <!-- <input type="text" readonly id="timespent" value="0:00"> -->
+        </div>
+        <div class="end-page hide">
+            <h1>Your Score</h1>
+            <p id="yourScore">0</p>
+            <h2>Input Your Name</h2>
+            <form id="save-form">
+                <input type="text" name="name" id="name" placeholder="Enter your name">
+                <button  id="saveGame" type="submit" onclick="saveHighScore(event)" disabled>Save</button>
+            </form>
+            <div class="button">
+                <button class="start-game bubbly-button" onclick="startGameBtn()" id="startGame">Play Again<i class="fas fa-undo-alt" style="margin-left: 8px;"></i></button>
+                <button id="highscore-btn" class="bubbly-button" onclick="highScoresLink()">High Score <i class="fas fa-crown"></i></button>
+            </div>
+        </div>
+    </div>
+    <script src="playGame.js"></script>
+</body>
+</html>
