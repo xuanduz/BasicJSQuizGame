@@ -16,7 +16,7 @@
     bubblyButtons[i].addEventListener("click", animateButton, false);
   }
 //! click start game
-function startGame(){
+function startGameBtn(){
   setTimeout(function(){
     location.href = "game.html";
   }, 1000)

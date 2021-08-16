@@ -42,11 +42,7 @@ ul{
   transition: 0.5s;
   transform: rotate(-360deg) scale(1.2);
 }
-.bubbly-button:hover .fa-crown{
-  /* transition: 0.3s; */
-  transform: scale(1.2);
-  animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
-}
+
 .bubbly-button {
     height: 4rem;
     width: 14rem;
