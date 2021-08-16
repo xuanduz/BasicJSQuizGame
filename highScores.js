@@ -18,7 +18,7 @@
 //! click start game
 function startGame(){
   setTimeout(function(){
-    location.href = "/game.html";
+    location.href = "game.html";
   }, 1000)
 }
 
